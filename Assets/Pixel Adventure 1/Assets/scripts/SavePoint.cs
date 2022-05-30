@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
+using UnityEngine.UI; //sem isso a inteface nao funciona
+using UnityEngine.SceneManagement; //bliblioteca pra gereniar a cena
 
 public class SavePoint : MonoBehaviour
 {
@@ -26,4 +27,10 @@ public class SavePoint : MonoBehaviour
     {
         gameOver.SetActive(true);
     }
+
+   public void RestartGame(string level)
+   {
+     SceneManager.LoadScene(level);
+   }
+
 }
